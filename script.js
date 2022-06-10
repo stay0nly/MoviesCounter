@@ -9,18 +9,15 @@ let personalMovieDB = {
     privat: false
 };
 
+let a = prompt("What was your las movie?");
+let b = prompt("How do yo rate it? (From 1 to 10)", "5");
+let c = prompt("What was your las movie?");
+let d = prompt("How do yo rate it? (From 1 to 10)", "5");
 
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-// 3) Задайте пользователю по два раза вопросы:
-//     - 'Один из последних просмотренных фильмов?'
-//     - 'На сколько оцените его?'
-// Ответы стоит поместить в отдельные переменные
-// Записать ответы в объект movies в формате: 
-//     movies: {
-//         'logan': '8.1'
-//     }
-
-// Проверить, чтобы все работало без ошибок в консоли
+console.log(personalMovieDB);
 
 
 
