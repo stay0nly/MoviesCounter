@@ -9,13 +9,30 @@ let personalMovieDB = {
     privat: false
 };
 
-let a = prompt("What was your las movie?");
-let b = prompt("How do yo rate it? (From 1 to 10)", "5");
-let c = prompt("What was your las movie?");
-let d = prompt("How do yo rate it? (From 1 to 10)", "5");
+for (let i = 0; i < 2; i++) {
+    let a = prompt("What was your last movie?");
+    let b = prompt("How do yo rate it? (From 1 to 10)", "5");
+    
+    
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log("Done!");
+    } else {
+        console.log("Error!");
+        i--;
+    }
+}
+
+if (personalMovieDB.count < 10) {
+    alert("Not many movies.");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    alert("You are a classical viewer");
+} else if (personalMovieDB.count >=30) {
+    alert("You are a maniac!");
+} else {
+    alert("Something went wrong.");
+}
 
 console.log(personalMovieDB);
 
