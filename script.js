@@ -22,7 +22,7 @@ let personalMovieDB = {
 
 
 
-function remembermyFilms() {
+function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
         let a = prompt("What was your last movie?");
         let b = prompt("How do yo rate it? (From 1 to 10)", "5");
@@ -37,7 +37,7 @@ function remembermyFilms() {
     }
 }
 
-remembermyFilms();
+rememberMyFilms();
 
 
 
@@ -66,12 +66,9 @@ function showMyDB(hidden) {
 showMyDB(personalMovieDB.privat);
 
 function writeYourGenres() {
-    for (let j = 1; j <= 3; j++) {
-        personalMovieDB.genres[j - 1] = prompt(`What is your favourite genre number ${j}`);
-        
+    for (let i = 1; i <= 3; i++) {
+        personalMovieDB.genres[i - 1] = prompt(`What is your favourite genre number ${i}`);  
     }
-
-
 }
 
 writeYourGenres();
